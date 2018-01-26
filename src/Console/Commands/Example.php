@@ -13,14 +13,14 @@ class Example extends Command
      *
      * @var string
      */
-    protected $signature = 'command:test';
+    protected $signature = 'command:test_ambient';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Test configuration';
 
     /**
      * Create a new command instance.

@@ -1,11 +1,10 @@
 <?php
-namespace jafo232\ambientapi;
 
+namespace jafo232\ambientapi;
 
 
 class AmbientApi
 {
-	//
 	private $client;
 
 	public function __construct()
@@ -13,14 +12,12 @@ class AmbientApi
 		$this->client = new \GuzzleHttp\Client();
 	}
 
-	public function foo()
-	{
-		echo "foo";
-	}
-
+	/*
+	 * Get all devices
+	 */
 	public function getDevices()
 	{
-		$res = $this->client->request('GET', config('ambient.endpoint') . '/devices?applicationKey='. config('ambient.applicationKey') .
+		$res = $this->client->request('GET', config('ambient.endpoint') . '/devices?applicationKey=' . config('ambient.applicationKey') .
 			'&apiKey=' . config('ambient.apiKey'));
 
 		if ($res->getStatusCode() == 200)
@@ -42,7 +39,7 @@ class AmbientApi
 		if (is_null($endDate))
 			$endDate = time() * 1000;
 
-		$res = $this->client->request('GET', config('ambient.endpoint') . '/devices/' . $mac . '?apiKey=' . config('ambient.apiKey') . '&applicationKey='. config('ambient.applicationKey') . '&limit=' . intval($limit) . '&endDate=' . intval($endDate));
+		$res = $this->client->request('GET', config('ambient.endpoint') . '/devices/' . $mac . '?apiKey=' . config('ambient.apiKey') . '&applicationKey=' . config('ambient.applicationKey') . '&limit=' . intval($limit) . '&endDate=' . intval($endDate));
 
 		if ($res->getStatusCode() == 200)
 		{
@@ -50,7 +47,5 @@ class AmbientApi
 
 			return json_decode($data, true);
 		}
-
 	}
-
 }

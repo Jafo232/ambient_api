@@ -14,8 +14,6 @@ class AmbientApiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-
 		$this->publishes([__DIR__.'/config/ambient.php' => config_path('ambient.php')]);
 
 		if ($this->app->runningInConsole()) {
@@ -23,7 +21,6 @@ class AmbientApiServiceProvider extends ServiceProvider
 				'\jafo232\ambientapi\Console\Commands\Example',
 			]);
 		}
-
     }
 
     /**
@@ -33,12 +30,9 @@ class AmbientApiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
 		App::bind('ambientapi', function()
 		{
 			return new \jafo232\ambientapi\AmbientApi;
 		});
-
-
     }
 }
