@@ -25,4 +25,9 @@ AMBIENT_API_KEY=YOUR_API_KEY_HERE
 
 Make sure you add your real keys.
 
+Once you have configured you .env file, you can test like so:
+
+artisan command:test_ambient
+
+The Example.php file in the commands folder shows you how to access devices
 
