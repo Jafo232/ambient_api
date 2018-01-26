@@ -18,6 +18,12 @@ class AmbientApiServiceProvider extends ServiceProvider
 
 		$this->publishes([__DIR__.'/config/ambient.php' => config_path('ambient.php')]);
 
+		if ($this->app->runningInConsole()) {
+			$this->commands([
+				'\jafo232\ambientapi\Console\Commands\Example',
+			]);
+		}
+
     }
 
     /**
