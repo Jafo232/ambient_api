@@ -20,6 +20,7 @@ php artisan vendor:publish
 You can edit the config/ambient.php directly or edit your .env file and add:
 
 AMBIENT_APPLICATION_KEY=YOUR_APPLICATION_KEY_HERE
+
 AMBIENT_API_KEY=YOUR_API_KEY_HERE
 
 Make sure you add your real keys.
