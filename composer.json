@@ -1,15 +1,16 @@
 {
-    "name": "jafo232/ambientapi",
-    "description": "A package for ambient api",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Jafo232",
-            "email": "jafo232@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "guzzlehttp/guzzle": "^6.2@dev"
+  "name": "jafo232/ambientapi",
+  "description": "A package for ambient api",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Jafo232",
+      "email": "jafo232@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "guzzlehttp/guzzle": "^6.2@dev"
+  }
 }
