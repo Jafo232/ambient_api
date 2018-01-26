@@ -9,6 +9,12 @@
       "email": "jafo232@gmail.com"
     }
   ],
+
+  "autoload": {
+    "psr-0": {
+      "jafo232\\ambientapi": "src/"
+    }
+  },
   "minimum-stability": "dev",
   "require": {
     "guzzlehttp/guzzle": "^6.2@dev"
